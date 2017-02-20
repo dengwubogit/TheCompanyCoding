@@ -22,6 +22,12 @@ public class HomeController {
 	public String login() {
 		return "login";
 	}
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	public String error() {
+		return "error";
+	}
+	
+	
 	
 	
 	// 登录提交地址和applicationontext-shiro.xml配置的loginurl一致。 (配置文件方式的说法)

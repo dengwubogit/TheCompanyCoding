@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">  
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+    <h3>index</h3>
+    <P><input type="checkbox" name="rememberMe" />记住我</P>
+ <!-- 验证当前用户是否为“访客”，即未认证（包含未记住）的用户。 -->  
+    <p shiro:guest="">Please <a href="login.html">login</a></p>  
+     <!-- 认证通过或已记住的用户。 -->  
+    <p shiro:user="">  
+       Welcome back John! Not John? Click <a href="login.html">here</a> to login. 
+       <!-- 验证当前用户是否属于该角色。 -->  
+    </p>  
+    <a shiro:hasRole="admin" href="login.html">Administer the system</a><!-- 拥有该角色 -->   
+    
+</body>
+</html>
+
+ 
